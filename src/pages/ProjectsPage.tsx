@@ -4,6 +4,7 @@ import Navbar from '../components/public/Navbar'
 import Footer from '../components/public/Footer'
 import MobileStickyCTA from '../components/public/MobileStickyCTA'
 import SchemaMarkup from '../components/public/SchemaMarkup'
+import { useGSAPAnimations } from '../hooks/useGSAPAnimations'
 import { PROJECTS_DATA, type ProjectItem } from '../data/projectData'
 import { useBusinessSettings } from '../hooks/useBusinessSettings'
 
@@ -13,6 +14,7 @@ type Props = {
 }
 
 export default function ProjectsPage({ onBack, onBook }: Props) {
+  useGSAPAnimations()
   const { settings } = useBusinessSettings()
   const [filter, setFilter] = useState<'all' | 'video' | 'image'>('all')
   const [activeMedia, setActiveMedia] = useState<ProjectItem | null>(null)
@@ -157,7 +159,7 @@ export default function ProjectsPage({ onBack, onBook }: Props) {
           </div>
 
           {/* Grid of Projects & Videos */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 gsap-grid-stagger">
             {filteredProjects.map((item) => (
               <article
                 key={item.id}

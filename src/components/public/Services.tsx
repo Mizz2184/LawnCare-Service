@@ -51,7 +51,7 @@ export default function Services({ onSelectService, onViewServiceDetail }: Props
   return (
     <section id="services" className="section relative">
       <div className="container-px mx-auto max-w-7xl">
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12 gsap-reveal">
           <div className="max-w-2xl">
             <span className="eyebrow">
               <Sparkles className="w-3.5 h-3.5" /> Services
@@ -73,20 +73,23 @@ export default function Services({ onSelectService, onViewServiceDetail }: Props
                 <div className="aspect-[4/3] bg-ink-100" />
                 <div className="p-6 space-y-3">
                   <div className="h-4 bg-ink-100 rounded w-3/4" />
-                  <div className="h-3 bg-ink-100 rounded w-full" />
-                  <div className="h-3 bg-ink-100 rounded w-2/3" />
+                  <div className="h-3 bg-ink-100 rounded w-1/2" />
                 </div>
               </div>
             ))}
           </div>
         )}
 
-        {!loading && error && <div className="card p-8 text-center text-ink-700">{error}</div>}
+        {error && (
+          <div className="p-6 bg-red-50 text-red-700 rounded-2xl border border-red-200">
+            {error}
+          </div>
+        )}
 
         {!loading && !error && services.length === 0 && (
-          <div className="card p-10 text-center">
+          <div className="text-center py-16 bg-white rounded-3xl border border-ink-100">
             <h3 className="font-display text-xl font-semibold text-forest-900">
-              Services coming soon
+              No services found
             </h3>
             <p className="mt-2 text-ink-600">
               Our service menu is being finalized. Check back shortly.
@@ -95,7 +98,7 @@ export default function Services({ onSelectService, onViewServiceDetail }: Props
         )}
 
         {!loading && services.length > 0 && (
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 gsap-grid-stagger">
             {services.map((service, idx) => (
               <ServiceCard
                 key={service.id}

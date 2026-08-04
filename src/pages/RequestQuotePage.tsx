@@ -5,6 +5,7 @@ import Footer from '../components/public/Footer'
 import MobileStickyCTA from '../components/public/MobileStickyCTA'
 import SchemaMarkup from '../components/public/SchemaMarkup'
 import { useBusinessSettings } from '../hooks/useBusinessSettings'
+import { useGSAPAnimations } from '../hooks/useGSAPAnimations'
 
 type Props = {
   onBack: () => void
@@ -39,6 +40,7 @@ const HEAR_ABOUT_OPTIONS = [
 ]
 
 export default function RequestQuotePage({ onBack, onBook }: Props) {
+  useGSAPAnimations()
   const { settings } = useBusinessSettings()
 
   // Form State

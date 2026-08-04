@@ -12,6 +12,7 @@ import ServiceDetailPage from './ServiceDetailPage'
 import ProjectsPage from './ProjectsPage'
 import RequestQuotePage from './RequestQuotePage'
 import { useBusinessSettings } from '../hooks/useBusinessSettings'
+import { useGSAPAnimations } from '../hooks/useGSAPAnimations'
 import type { Service } from '../types/database'
 
 function getServiceSlugFromHash(): string | null {
@@ -33,6 +34,7 @@ function isQuoteRoute(): boolean {
 }
 
 export default function PublicSite() {
+  useGSAPAnimations()
   const { settings } = useBusinessSettings()
   const [preselected, setPreselected] = useState<Service | null>(null)
   const [currentServiceSlug, setCurrentServiceSlug] = useState<string | null>(getServiceSlugFromHash())

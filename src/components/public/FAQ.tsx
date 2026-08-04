@@ -67,7 +67,7 @@ export default function FAQ() {
   return (
     <section id="faq" className="section bg-cream-50 relative">
       <div className="container-px mx-auto max-w-4xl">
-        <div className="text-center max-w-2xl mx-auto mb-12">
+        <div className="text-center max-w-2xl mx-auto mb-12 gsap-reveal">
           <span className="eyebrow inline-flex">
             <HelpCircle className="w-3.5 h-3.5" /> Frequently Asked Questions
           </span>
@@ -79,7 +79,7 @@ export default function FAQ() {
           </p>
         </div>
 
-        <div className="space-y-4">
+        <div className="space-y-4 gsap-grid-stagger">
           {GENERAL_FAQS.map((faq, idx) => {
             const isOpen = openIndex === idx
             return (

@@ -34,7 +34,7 @@ export default function About() {
 
       {/* 1. Our Story Block */}
       <div className="container-px mx-auto max-w-7xl relative z-10">
-        <div className="text-center max-w-3xl mx-auto mb-12">
+        <div className="text-center max-w-3xl mx-auto mb-12 gsap-reveal">
           <span className="eyebrow inline-flex">
             <Heart className="w-3.5 h-3.5" /> About Us
           </span>
@@ -43,7 +43,7 @@ export default function About() {
           </h2>
         </div>
 
-        <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center gsap-reveal">
           {/* Story Text Box */}
           <div className="lg:col-span-7 space-y-6">
             <div className="bg-white/90 backdrop-blur rounded-3xl p-8 md:p-10 border border-forest-100 shadow-card space-y-4">
