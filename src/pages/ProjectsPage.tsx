@@ -1,12 +1,11 @@
 import { useEffect, useState } from 'react'
-import { ArrowLeft, Calendar, Filter, Image as ImageIcon, MapPin, Play, Sparkles, Video } from 'lucide-react'
+import { ArrowLeft, Calendar, ExternalLink, Filter, Image as ImageIcon, MapPin, Maximize2, Play, Sparkles, Video, X } from 'lucide-react'
 import Navbar from '../components/public/Navbar'
 import Footer from '../components/public/Footer'
 import MobileStickyCTA from '../components/public/MobileStickyCTA'
 import SchemaMarkup from '../components/public/SchemaMarkup'
 import { PROJECTS_DATA, type ProjectItem } from '../data/projectData'
 import { useBusinessSettings } from '../hooks/useBusinessSettings'
-import type { Service } from '../types/database'
 
 type Props = {
   onBack: () => void
@@ -16,11 +15,11 @@ type Props = {
 export default function ProjectsPage({ onBack, onBook }: Props) {
   const { settings } = useBusinessSettings()
   const [filter, setFilter] = useState<'all' | 'video' | 'image'>('all')
-  const [selectedMedia, setSelectedMedia] = useState<ProjectItem | null>(null)
+  const [activeMedia, setActiveMedia] = useState<ProjectItem | null>(null)
 
   useEffect(() => {
     window.scrollTo(0, 0)
-    document.title = `Project Gallery & Videos | Landscaping And Moore`
+    document.title = `Projects & Video Showcase | Landscaping And Moore`
 
     const baseUrl = window.location.origin
     const businessName = settings.business_name || 'Landscaping And Moore'
@@ -54,14 +53,12 @@ export default function ProjectsPage({ onBack, onBook }: Props) {
       copyrightNotice: `© ${new Date().getFullYear()} ${businessName}`,
     }))
 
-    // Inject VideoObject Schemas
     const scriptVid = document.createElement('script')
     scriptVid.id = 'jsonld-projects-video'
     scriptVid.type = 'application/ld+json'
     scriptVid.textContent = JSON.stringify(videoSchemas)
     document.head.appendChild(scriptVid)
 
-    // Inject ImageObject Schemas
     const scriptImg = document.createElement('script')
     scriptImg.id = 'jsonld-projects-image'
     scriptImg.type = 'application/ld+json'
@@ -73,6 +70,15 @@ export default function ProjectsPage({ onBack, onBook }: Props) {
       document.getElementById('jsonld-projects-image')?.remove()
     }
   }, [settings])
+
+  // ESC key listener to close modal
+  useEffect(() => {
+    function handleKeyDown(e: KeyboardEvent) {
+      if (e.key === 'Escape') setActiveMedia(null)
+    }
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [])
 
   const filteredProjects = PROJECTS_DATA.filter((p) => {
     if (filter === 'video') return p.type === 'video'
@@ -109,7 +115,7 @@ export default function ProjectsPage({ onBack, onBook }: Props) {
                 Our Lawn & Landscape Projects
               </h1>
               <p className="mt-4 text-ink-700 text-base md:text-lg leading-relaxed">
-                Explore real video recordings and enhanced HD photo transformations from our lawn care visits in Cedar Hills, Highland, American Fork, and Utah Valley.
+                Click any video or image below to view and play in full-screen HD. See real work from our lawn care visits across Cedar Hills, Highland, American Fork, and Utah Valley.
               </p>
             </div>
 
@@ -155,7 +161,8 @@ export default function ProjectsPage({ onBack, onBook }: Props) {
             {filteredProjects.map((item) => (
               <article
                 key={item.id}
-                className="group card overflow-hidden flex flex-col bg-white border border-ink-100 hover:shadow-card hover:-translate-y-1 transition-all duration-300"
+                className="group card overflow-hidden flex flex-col bg-white border border-ink-100 hover:shadow-card hover:-translate-y-1 transition-all duration-300 cursor-pointer"
+                onClick={() => setActiveMedia(item)}
               >
                 <div className="relative aspect-[4/3] overflow-hidden bg-forest-950">
                   {item.type === 'video' ? (
@@ -178,7 +185,7 @@ export default function ProjectsPage({ onBack, onBook }: Props) {
                     />
                   )}
 
-                  <div className="absolute inset-0 bg-gradient-to-t from-forest-950/60 via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-forest-950/70 via-transparent to-transparent group-hover:from-forest-950/80 transition-colors" />
 
                   {/* Badges */}
                   <div className="absolute top-3 left-3 flex gap-2">
@@ -193,13 +200,16 @@ export default function ProjectsPage({ onBack, onBook }: Props) {
                     )}
                   </div>
 
-                  {item.type === 'video' && (
-                    <div className="absolute inset-0 grid place-items-center pointer-events-none">
-                      <div className="w-12 h-12 rounded-full bg-forest-900/80 backdrop-blur text-cream-50 grid place-items-center group-hover:scale-110 transition-transform shadow-lift border border-white/20">
-                        <Play className="w-5 h-5 fill-cream-50 ml-0.5" />
-                      </div>
+                  {/* Hover Action Center Badge */}
+                  <div className="absolute inset-0 grid place-items-center">
+                    <div className="w-14 h-14 rounded-full bg-forest-900/85 backdrop-blur text-cream-50 grid place-items-center group-hover:scale-110 transition-transform shadow-lift border border-white/30">
+                      {item.type === 'video' ? (
+                        <Play className="w-6 h-6 fill-cream-50 ml-1 text-cream-50" />
+                      ) : (
+                        <Maximize2 className="w-6 h-6 text-cream-50" />
+                      )}
                     </div>
-                  )}
+                  </div>
 
                   <div className="absolute bottom-3 left-3 flex items-center gap-1.5 text-cream-50 text-xs font-medium backdrop-blur bg-forest-950/60 px-3 py-1 rounded-full border border-white/10">
                     <MapPin className="w-3 h-3 text-lemon-400" />
@@ -208,7 +218,7 @@ export default function ProjectsPage({ onBack, onBook }: Props) {
                 </div>
 
                 <div className="p-6 flex flex-col flex-1">
-                  <h3 className="font-display text-xl font-semibold text-forest-900 leading-snug">
+                  <h3 className="font-display text-xl font-semibold text-forest-900 leading-snug group-hover:text-forest-700 transition-colors">
                     {item.title}
                   </h3>
                   <p className="mt-2 text-sm text-ink-600 leading-relaxed flex-1 line-clamp-3">
@@ -216,14 +226,17 @@ export default function ProjectsPage({ onBack, onBook }: Props) {
                   </p>
 
                   <div className="mt-5 pt-4 border-t border-ink-100/60 flex items-center justify-between">
-                    <span className="text-xs text-ink-500 font-medium">
-                      Published {item.datePublished}
+                    <span className="text-xs font-semibold text-forest-700 inline-flex items-center gap-1">
+                      {item.type === 'video' ? 'Click to play video ▶' : 'Click to view photo 🔍'}
                     </span>
                     <button
-                      onClick={onBook}
+                      onClick={(e) => {
+                        e.stopPropagation()
+                        onBook()
+                      }}
                       className="inline-flex items-center gap-1 text-xs font-semibold text-forest-800 hover:text-forest-950"
                     >
-                      <span>Book similar work</span>
+                      <span>Book similar</span>
                       <Calendar className="w-3.5 h-3.5 text-forest-700" />
                     </button>
                   </div>
@@ -256,6 +269,79 @@ export default function ProjectsPage({ onBack, onBook }: Props) {
           </div>
         </div>
       </main>
+
+      {/* Lightbox / Video Player Modal */}
+      {activeMedia && (
+        <div
+          className="fixed inset-0 z-50 bg-forest-950/90 backdrop-blur-md p-4 sm:p-6 md:p-10 flex items-center justify-center animate-fade-in"
+          onClick={() => setActiveMedia(null)}
+        >
+          <div
+            className="relative w-full max-w-4xl bg-forest-900 border border-forest-700 rounded-3xl overflow-hidden shadow-2xl flex flex-col max-h-[90vh]"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Modal Header */}
+            <div className="p-4 sm:p-6 border-b border-forest-800 flex items-center justify-between gap-4 bg-forest-950/60">
+              <div className="flex items-center gap-3">
+                <span className="badge bg-lemon-400 text-forest-950 font-semibold border-none">
+                  {activeMedia.type === 'video' ? 'Video Player' : 'HD Photo Viewer'}
+                </span>
+                <span className="text-xs text-cream-50/70 flex items-center gap-1">
+                  <MapPin className="w-3 h-3 text-lemon-400" /> {activeMedia.location}
+                </span>
+              </div>
+              <button
+                onClick={() => setActiveMedia(null)}
+                className="w-9 h-9 rounded-full bg-forest-800 hover:bg-forest-700 text-cream-50 grid place-items-center transition-colors border border-forest-600"
+                aria-label="Close modal"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            {/* Media Container */}
+            <div className="p-4 sm:p-6 bg-black flex items-center justify-center flex-1 min-h-[300px] overflow-hidden">
+              {activeMedia.type === 'video' ? (
+                <video
+                  src={activeMedia.src}
+                  poster={activeMedia.poster}
+                  controls
+                  autoPlay
+                  playsInline
+                  className="w-full max-h-[60vh] rounded-xl object-contain shadow-2xl"
+                />
+              ) : (
+                <img
+                  src={activeMedia.src}
+                  alt={activeMedia.title}
+                  className="w-full max-h-[60vh] rounded-xl object-contain shadow-2xl"
+                />
+              )}
+            </div>
+
+            {/* Modal Info & CTA */}
+            <div className="p-6 bg-forest-900 border-t border-forest-800 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div>
+                <h3 className="font-display text-xl font-semibold text-cream-50">
+                  {activeMedia.title}
+                </h3>
+                <p className="text-sm text-cream-50/80 mt-1 max-w-xl">
+                  {activeMedia.description}
+                </p>
+              </div>
+              <button
+                onClick={() => {
+                  setActiveMedia(null)
+                  onBook()
+                }}
+                className="btn-primary bg-cream-50 text-forest-900 hover:bg-white shrink-0"
+              >
+                Book This Service
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
       <Footer settings={settings} onBook={onBook} />
       <MobileStickyCTA settings={settings} onBook={onBook} />
