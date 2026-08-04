@@ -20,17 +20,17 @@ export const DETAILED_SERVICES: Record<string, DetailedService> = {
     id: 'demo-mow',
     slug: 'weekly-lawn-mowing',
     name: 'Weekly Lawn Mowing',
-    tagline: 'Precision mowing, crisp edging, and spotless driveway cleanup every single week in Cedar Hills.',
+    tagline: 'Precision mowing, crisp edging, and spotless driveway cleanup every single week across Chester, Delaware & Montgomery Counties, PA.',
     durationMinutes: 45,
     price: 65,
     category: 'Lawn Maintenance',
     shortDescription: 'Clean, even mowing with crisp edging along walkways and driveways. Clippings cleaned up before we leave.',
     fullContent: `
-      Maintaining a pristine, vibrant green lawn requires consistent care tailored to local turf types and seasonal growth cycles. At Landscaping And Moore, our Weekly Lawn Mowing service is designed specifically for Cedar Hills homeowners who demand perfection without the hassle. Every visit includes precision rotary or reel mowing adjusted to the optimal grass height, sharp vertical edging along driveways and walkways, line trimming around trees and garden beds, and complete hard-surface blow-cleaning before our service team leaves your property.
+      Maintaining a pristine, vibrant green lawn requires consistent care tailored to local turf types and seasonal growth cycles. At Landscaping And Moore, our Weekly Lawn Mowing service is designed specifically for Chesterbrook and Main Line homeowners who demand perfection without the hassle. Every visit includes precision rotary or reel mowing adjusted to the optimal grass height, sharp vertical edging along driveways and walkways, line trimming around trees and garden beds, and complete hard-surface blow-cleaning before our service team leaves your property.
 
       Proper mowing height and clean blade edges are essential for turf health. Cutting grass too short stresses root systems and invites weed growth, while dull blades tear grass blades, causing brown tips and disease susceptibility. Our commercial-grade mowers feature razor-sharp blades replaced daily, and our technicians adjust cutting heights according to turf conditions and seasonal rainfall.
 
-      Whether you have Kentucky Bluegrass, Perennial Ryegrass, or Fine Fescue, our scheduled weekly visits keep your lawn looking manicured, thick, and healthy all season long. We operate on predictable service schedules, send arrival notifications, and back every visit with our 100% satisfaction guarantee.
+      Whether you have Fine Fescue, Perennial Ryegrass, or Kentucky Bluegrass, our scheduled weekly visits keep your lawn looking manicured, thick, and healthy all season long. We operate on predictable service schedules, send arrival notifications, and back every visit with our 100% satisfaction guarantee.
     `,
     features: [
       'Commercial-grade precision mowing at optimal turf height',
@@ -61,15 +61,15 @@ export const DETAILED_SERVICES: Record<string, DetailedService> = {
     faqs: [
       {
         question: 'What day of the week will my lawn be mowed?',
-        answer: 'We assign consistent weekly service days by neighborhood to ensure efficiency and reliability.',
+        answer: 'We assign consistent weekly service days by neighborhood across Chester, Delaware, and Montgomery counties to ensure efficiency and reliability.',
       },
       {
         question: 'Do I need to be home during service?',
         answer: 'No, as long as our team has clear access through gates and pets are safely indoors.',
       },
     ],
-    metaDescription: 'Professional weekly lawn mowing in Cedar Hills by Landscaping And Moore. Includes precision mowing, crisp edging, line trimming, and complete cleanup.',
-    keywords: ['weekly lawn mowing Cedar Hills', 'lawn care service', 'grass cutting', 'lawn edging Cedar Hills'],
+    metaDescription: 'Professional weekly lawn mowing in Chesterbrook & Main Line PA by Landscaping And Moore. Includes precision mowing, crisp edging, line trimming, and complete cleanup.',
+    keywords: ['weekly lawn mowing Chesterbrook', 'lawn care service PA', 'grass cutting Main Line', 'lawn edging Chester County'],
   },
 
   'full-lawn-maintenance-visit': {
@@ -82,7 +82,7 @@ export const DETAILED_SERVICES: Record<string, DetailedService> = {
     category: 'Full Service Care',
     shortDescription: 'Mow, edge, line-trim, and blow-clean—everything a healthy yard needs in a single visit.',
     fullContent: `
-      A great lawn is more than just cut grass; it requires comprehensive attention to borders, flower beds, small weeds, and property cleanliness. Landscaping And Moore provides complete Full Lawn Maintenance visits for residential properties in Cedar Hills and surrounding areas. This comprehensive visit combines our premium weekly mowing with proactive bed weeding, shrub line maintenance, and turf health spot checks.
+      A great lawn is more than just cut grass; it requires comprehensive attention to borders, flower beds, small weeds, and property cleanliness. Landscaping And Moore provides complete Full Lawn Maintenance visits for residential properties in Chesterbrook, Chester County, Delaware County, and Montgomery County, PA. This comprehensive visit combines our premium weekly mowing with proactive bed weeding, shrub line maintenance, and turf health spot checks.
 
       Our full maintenance visits are tailored for busy homeowners, rental property owners, and busy families who want a complete, worry-free solution. During each 75-minute visit, our crew handles grass cutting, precision edging, weed removal from mulch beds and pavers, light debris collection, and seasonal turf assessments.
 
@@ -120,8 +120,8 @@ export const DETAILED_SERVICES: Record<string, DetailedService> = {
         answer: 'Full maintenance includes flower bed weeding, paver weed clearing, and debris pick-up in addition to lawn mowing.',
       },
     ],
-    metaDescription: 'Complete full lawn maintenance in Cedar Hills. Mowing, edging, flower bed weeding, and debris clearing in one visit by Landscaping And Moore.',
-    keywords: ['full lawn maintenance Cedar Hills', 'yard care package', 'lawn and garden service', 'property care'],
+    metaDescription: 'Complete full lawn maintenance in Chesterbrook & Main Line PA. Mowing, edging, flower bed weeding, and debris clearing in one visit by Landscaping And Moore.',
+    keywords: ['full lawn maintenance Chesterbrook', 'yard care package PA', 'lawn and garden service Main Line', 'property care'],
   },
 
   'hedge-shrub-trimming': {
@@ -134,7 +134,7 @@ export const DETAILED_SERVICES: Record<string, DetailedService> = {
     category: 'Pruning & Shaping',
     shortDescription: 'Shape and trim hedges and shrubs to keep your yard looking sharp and well-cared-for.',
     fullContent: `
-      Overgrown hedges, untamed bushes, and sprawling shrubs degrade your home's curb appeal and block natural sunlight from reaching lower branches and surrounding plants. Landscaping And Moore offers expert Hedge & Shrub Trimming services across Cedar Hills, restoring clean architectural lines and supporting long-term plant health.
+      Overgrown hedges, untamed bushes, and sprawling shrubs degrade your home's curb appeal and block natural sunlight from reaching lower branches and surrounding plants. Landscaping And Moore offers expert Hedge & Shrub Trimming services across Chester, Delaware, and Montgomery counties in PA, restoring clean architectural lines and supporting long-term plant health.
 
       Pruning is both an art and a science. Timing and technique matter greatly depending on whether your plants are evergreen hedges, deciduous shrubs, or flowering bushes. Our experienced horticulturists and trim technicians understand optimal pruning windows to promote dense foliage, stimulate healthy growth, and prevent woody interior dieback.
 
@@ -168,12 +168,12 @@ export const DETAILED_SERVICES: Record<string, DetailedService> = {
     ],
     faqs: [
       {
-        question: 'When is the best time to trim hedges in Cedar Hills?',
+        question: 'When is the best time to trim hedges in Pennsylvania?',
         answer: 'Late spring and late summer are ideal for most species, though light shaping can be done throughout the growing season.',
       },
     ],
-    metaDescription: 'Professional hedge and shrub trimming in Cedar Hills. Shape bushes, remove deadwood, and elevate curb appeal with Landscaping And Moore.',
-    keywords: ['hedge trimming Cedar Hills', 'shrub pruning', 'bush shaping', 'landscape trimming'],
+    metaDescription: 'Professional hedge and shrub trimming in Chesterbrook & Main Line PA. Shape bushes, remove deadwood, and elevate curb appeal with Landscaping And Moore.',
+    keywords: ['hedge trimming Chesterbrook', 'shrub pruning PA', 'bush shaping Main Line', 'landscape trimming'],
   },
 
   'seasonal-yard-cleanup': {
@@ -186,7 +186,7 @@ export const DETAILED_SERVICES: Record<string, DetailedService> = {
     category: 'Seasonal Care',
     shortDescription: 'Leaf removal, debris cleanup, and a thorough refresh to get the yard season-ready.',
     fullContent: `
-      Spring thaw and fall leaf drops introduce heavy organic buildup that can smother grass, trap moisture, and foster fungal turf diseases. Landscaping And Moore provides deep Seasonal Yard Cleanup services in Cedar Hills to prepare your property for optimal growth in spring and protect your root systems through harsh winter months.
+      Spring thaw and fall leaf drops introduce heavy organic buildup that can smother grass, trap moisture, and foster fungal turf diseases. Landscaping And Moore provides deep Seasonal Yard Cleanup services across Chester, Delaware, and Montgomery counties in PA to prepare your property for optimal growth in spring and protect your root systems through harsh winter months.
 
       In the Spring, our cleanup removes winter debris, fallen branches, dead perennial growth, and matted leaf layers to let sunlight and oxygen reach dormant grass crowns. In the Fall, our high-velocity leaf blowers and commercial vacuum systems clear heavy autumn leaves from turf, flower beds, window wells, and drain lines.
 
@@ -224,8 +224,8 @@ export const DETAILED_SERVICES: Record<string, DetailedService> = {
         answer: 'Yes! Full green waste loading and eco-friendly composting offsite is included in our price.',
       },
     ],
-    metaDescription: 'Spring & Fall seasonal yard cleanups in Cedar Hills by Landscaping And Moore. Leaf removal, perennial cutback, and green waste hauling.',
-    keywords: ['seasonal yard cleanup Cedar Hills', 'spring yard cleanup', 'fall leaf removal', 'lawn dethatching'],
+    metaDescription: 'Spring & Fall seasonal yard cleanups in Chesterbrook & Main Line PA by Landscaping And Moore. Leaf removal, perennial cutback, and green waste hauling.',
+    keywords: ['seasonal yard cleanup Chesterbrook', 'spring yard cleanup PA', 'fall leaf removal Main Line', 'lawn dethatching'],
   },
 
   'fertilization-visit': {
@@ -238,7 +238,7 @@ export const DETAILED_SERVICES: Record<string, DetailedService> = {
     category: 'Turf Care',
     shortDescription: 'Careful, professional turf treatment timed for the season to support healthy, green growth.',
     fullContent: `
-      Achieving a vibrant, weed-free lawn requires targeted nutrient applications delivered at precise times during the growing season. Landscaping And Moore provides tailored Fertilization & Turf Treatment programs designed specifically for soil conditions in Cedar Hills and Utah Valley.
+      Achieving a vibrant, weed-free lawn requires targeted nutrient applications delivered at precise times during the growing season. Landscaping And Moore provides tailored Fertilization & Turf Treatment programs designed specifically for soil conditions across Chester County, Delaware County, and Montgomery County, PA.
 
       Our granular and liquid fertilizers supply essential nitrogen, phosphorus, potassium, and micronutrients to strengthen root architecture and improve drought tolerance. Simultaneously, our pre-emergent treatments block broadleaf weeds and crabgrass before they sprout, while post-emergent applications eliminate existing dandelions, clover, and thistles.
 
@@ -276,8 +276,8 @@ export const DETAILED_SERVICES: Record<string, DetailedService> = {
         answer: 'We recommend keeping pets and children off treated areas until the application has dried or been watered in (typically 2-4 hours).',
       },
     ],
-    metaDescription: 'Custom fertilization & weed control in Cedar Hills. Professional turf treatment programs by Landscaping And Moore for lush green lawns.',
-    keywords: ['lawn fertilization Cedar Hills', 'weed control service', 'turf treatment', 'lawn care program'],
+    metaDescription: 'Custom fertilization & weed control in Chesterbrook & Main Line PA. Professional turf treatment programs by Landscaping And Moore for lush green lawns.',
+    keywords: ['lawn fertilization Chesterbrook', 'weed control service PA', 'turf treatment Main Line', 'lawn care program'],
   },
 
   'landscape-consultation': {
@@ -290,7 +290,7 @@ export const DETAILED_SERVICES: Record<string, DetailedService> = {
     category: 'Consultation',
     shortDescription: 'A walk-through of your yard with our team to plan the right care routine and curb appeal upgrades.',
     fullContent: `
-      Unsure which lawn program or landscaping improvement is right for your property? Landscaping And Moore offers complimentary on-site Landscape & Yard Consultations for homeowners in Cedar Hills. Our lead landscape specialist will meet with you at your property, evaluate your soil condition, turf health, drainage patterns, and plant vitality, and answer all your questions.
+      Unsure which lawn program or landscaping improvement is right for your property? Landscaping And Moore offers complimentary on-site Landscape & Yard Consultations for homeowners in Chesterbrook, Chester County, Delaware County, and Montgomery County, PA. Our lead landscape specialist will meet with you at your property, evaluate your soil condition, turf health, drainage patterns, and plant vitality, and answer all your questions.
 
       During the 30-minute walk-through, we discuss your goals—whether you need weekly routine mowing, lawn rehabilitation, sod installation, mulch refresh, or seasonal shrub care. You'll receive clear recommendations, an itemized quote with zero pressure, and an action plan tailored to your budget.
 
@@ -328,7 +328,7 @@ export const DETAILED_SERVICES: Record<string, DetailedService> = {
         answer: 'Yes, 100% free with no obligation to purchase any services.',
       },
     ],
-    metaDescription: 'Free landscape consultation in Cedar Hills by Landscaping And Moore. On-site property walk-through and customized lawn care plan.',
-    keywords: ['free landscape consultation Cedar Hills', 'lawn evaluation', 'landscaping quote', 'yard consultation'],
+    metaDescription: 'Free landscape consultation in Chesterbrook & Main Line PA by Landscaping And Moore. On-site property walk-through and customized lawn care plan.',
+    keywords: ['free landscape consultation Chesterbrook', 'lawn evaluation PA', 'landscaping quote Main Line', 'yard consultation'],
   },
 }

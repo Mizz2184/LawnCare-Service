@@ -40,30 +40,30 @@ export default function SchemaMarkup({ settings }: { settings: BusinessSettings 
           '@type': 'GeoCircle',
           geoMidpoint: {
             '@type': 'GeoCoordinates',
-            latitude: 40.4138,
-            longitude: -111.7583,
+            latitude: 40.0801,
+            longitude: -75.4578,
           },
-          geoRadius: '25000',
+          geoRadius: '35000',
         },
         {
           '@type': 'City',
-          name: 'Cedar Hills',
+          name: 'Chesterbrook',
         },
         {
           '@type': 'City',
-          name: 'Highland',
+          name: 'Wayne',
         },
         {
           '@type': 'City',
-          name: 'American Fork',
+          name: 'King of Prussia',
         },
         {
           '@type': 'City',
-          name: 'Pleasant Grove',
+          name: 'Bryn Mawr',
         },
         {
-          '@type': 'City',
-          name: 'Lehi',
+          '@type': 'State',
+          name: 'Chester, Delaware & Montgomery Counties, PA',
         },
       ],
       openingHoursSpecification: [
@@ -109,7 +109,7 @@ export default function SchemaMarkup({ settings }: { settings: BusinessSettings 
             name: 'David R.',
           },
           datePublished: '2026-07-02',
-          reviewBody: 'Outstanding hedge trimming and crisp lawn edging. Best landscaping team in Cedar Hills!',
+          reviewBody: 'Outstanding hedge trimming and crisp lawn edging. Best landscaping team in Chesterbrook!',
           reviewRating: {
             '@type': 'Rating',
             ratingValue: '5',
@@ -136,8 +136,8 @@ export default function SchemaMarkup({ settings }: { settings: BusinessSettings 
             name: businessName,
           },
           areaServed: {
-            '@type': 'City',
-            name: 'Cedar Hills',
+            '@type': 'State',
+            name: 'Chester, Delaware & Montgomery Counties, PA',
           },
           offers: {
             '@type': 'Offer',

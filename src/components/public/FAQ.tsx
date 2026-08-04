@@ -3,9 +3,9 @@ import { ChevronDown, HelpCircle } from 'lucide-react'
 
 export const GENERAL_FAQS = [
   {
-    question: 'How often should my lawn be mowed in Cedar Hills?',
+    question: 'How often should my lawn be mowed in Chesterbrook & the Main Line?',
     answer:
-      'During the active growing season (April through October), weekly mowing is recommended for optimal turf density and health. Weekly cutting keeps grass at its ideal 2.5–3.5 inch height, preventing root stress and weed infestation.',
+      'During the active growing season (April through October), weekly mowing is recommended for optimal turf density and health across Chester, Delaware, and Montgomery counties. Weekly cutting keeps grass at its ideal 2.5–3.5 inch height, preventing root stress and weed infestation.',
   },
   {
     question: 'What is included in a seasonal yard cleanup?',
@@ -23,9 +23,9 @@ export const GENERAL_FAQS = [
       'Recurring weekly or bi-weekly services are scheduled on a fixed weekday with transparent flat-rate billing. One-time bookings (cleanups, landscape consultations, hedge trimming) can be scheduled individually as needed.',
   },
   {
-    question: 'What is your service area coverage around Cedar Hills?',
+    question: 'What is your service area coverage in Pennsylvania?',
     answer:
-      'We proudly serve Cedar Hills, Highland, American Fork, Pleasant Grove, Lehi, and surrounding Utah Valley communities within a 15-mile radius.',
+      'We proudly service residential and commercial properties throughout Chester County, Delaware County, and Montgomery County, PA (including Chesterbrook, Wayne, King of Prussia, Main Line communities, and surrounding areas).',
   },
   {
     question: 'How is lawn care pricing calculated?',

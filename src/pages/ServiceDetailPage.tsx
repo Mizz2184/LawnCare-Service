@@ -33,7 +33,7 @@ export default function ServiceDetailPage({ slug, onBack, onBookService }: Props
 
   useEffect(() => {
     window.scrollTo(0, 0)
-    document.title = `${detail.name} in Cedar Hills | Landscaping And Moore`
+    document.title = `${detail.name} in Chesterbrook, PA | Landscaping And Moore`
 
     // Inject custom Service JSON-LD Schema
     const serviceSchema = {
@@ -48,8 +48,8 @@ export default function ServiceDetailPage({ slug, onBack, onBookService }: Props
         address: settings.business_address || '711 Washington Place, Chesterbrook, PA 19087',
       },
       areaServed: {
-        '@type': 'City',
-        name: 'Cedar Hills',
+        '@type': 'State',
+        name: 'Chester, Delaware & Montgomery Counties, PA',
       },
       offers: {
         '@type': 'Offer',
@@ -94,8 +94,8 @@ export default function ServiceDetailPage({ slug, onBack, onBookService }: Props
         {/* Hero Section */}
         <section className="container-px mx-auto max-w-7xl grid lg:grid-cols-12 gap-10 lg:gap-12 items-start">
           <div className="lg:col-span-7 space-y-6">
-            <span className="eyebrow">
-              <Sparkles className="w-3.5 h-3.5" /> {detail.category} · Cedar Hills, UT
+            <span className="eyebrow inline-flex">
+              <Sparkles className="w-3.5 h-3.5" /> {detail.category} · Chesterbrook, PA
             </span>
             <h1 className="font-display text-4xl sm:text-5xl font-semibold text-forest-900 leading-tight">
               {detail.name}
@@ -230,7 +230,7 @@ export default function ServiceDetailPage({ slug, onBack, onBookService }: Props
                   <span className="ml-2 text-xs font-semibold text-ink-800">4.9/5 Rating</span>
                 </div>
                 <p className="text-xs text-ink-600 mt-1">
-                  Trusted by 1,200+ homeowners across Cedar Hills & Utah Valley.
+                  Trusted by homeowners across Chester, Delaware & Montgomery Counties, PA.
                 </p>
               </div>
             </div>
@@ -240,12 +240,11 @@ export default function ServiceDetailPage({ slug, onBack, onBookService }: Props
               <div className="flex items-center gap-3 text-sage-200">
                 <MapPin className="w-5 h-5 text-lemon-400" />
                 <h4 className="font-display text-lg font-semibold text-cream-50">
-                  Cedar Hills Service Coverage
+                  PA Counties Service Coverage
                 </h4>
               </div>
               <p className="text-sm text-cream-50/80 leading-relaxed">
-                We perform {detail.name.toLowerCase()} services in Cedar Hills, Highland, American
-                Fork, Pleasant Grove, and Lehi.
+                We perform {detail.name.toLowerCase()} services in Chesterbrook, Chester County, Delaware County, and Montgomery County, PA.
               </p>
               <div className="pt-2 border-t border-cream-50/10">
                 <button

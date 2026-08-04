@@ -117,7 +117,7 @@ export default function ProjectsPage({ onBack, onBook }: Props) {
                 Our Lawn & Landscape Projects
               </h1>
               <p className="mt-4 text-ink-700 text-base md:text-lg leading-relaxed">
-                Click any video or image below to view and play in full-screen HD. See real work from our lawn care visits across Cedar Hills, Highland, American Fork, and Utah Valley.
+                Click any video or image below to view and play in full-screen HD. See real work from our lawn care visits across Chesterbrook, Chester County, Delaware County, Montgomery County, and the Main Line, PA.
               </p>
             </div>
 
