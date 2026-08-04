@@ -25,7 +25,7 @@ export function getServiceImage(name: string): string {
 
 export const HERO_IMAGE = '/images/mowing.webp'
 
-export const ABOUT_IMAGE_PRIMARY = '/images/maintenance.webp'
+export const ABOUT_IMAGE_PRIMARY = '/images/owner.webp'
 
 export const ABOUT_IMAGE_SECONDARY = '/images/hedge.webp'
 

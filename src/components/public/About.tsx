@@ -37,8 +37,8 @@ export default function About() {
               <div className="aspect-[4/5] rounded-[1.75rem] overflow-hidden shadow-card border border-white">
                 <img
                   src={ABOUT_IMAGE_PRIMARY}
-                  alt="Lawn care professional mowing a healthy green lawn"
-                  className="w-full h-full object-cover"
+                  alt="Landscaping And Moore business owner"
+                  className="w-full h-full object-cover object-[center_25%]"
                   loading="lazy"
                 />
               </div>
