@@ -22,8 +22,6 @@ export default function Navbar({ settings, onBook }: Props) {
     { label: 'Services', href: '#services' },
     { label: 'Projects', href: '#/projects' },
     { label: 'About', href: '#about' },
-    { label: 'FAQ', href: '#faq' },
-    { label: 'Book', href: '#book' },
     { label: 'Contact', href: '#footer' },
   ]
 
