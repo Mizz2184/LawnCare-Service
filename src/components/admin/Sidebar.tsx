@@ -36,13 +36,11 @@ export default function Sidebar({
     <aside className="hidden lg:flex flex-col w-64 shrink-0 border-r border-ink-100 bg-white">
       <div className="p-6 border-b border-ink-100">
         <a href="#top" className="flex items-center gap-3">
-          <div className="h-10 px-2 py-0.5 rounded-xl border border-forest-700/15 shadow-soft bg-cream-50 shrink-0 flex items-center justify-center">
-            <img
-              src="/logo.png"
-              alt="Landscaping And Moore Logo"
-              className="h-full w-auto object-contain"
-            />
-          </div>
+          <img
+            src="/logo.png"
+            alt="Landscaping And Moore Logo"
+            className="h-10 w-auto object-contain shrink-0"
+          />
           <div className="flex flex-col leading-tight">
             <span className="font-display text-base font-semibold text-forest-900">Landscaping And Moore</span>
             <span className="text-[11px] uppercase tracking-wider text-ink-500">Service portal</span>
