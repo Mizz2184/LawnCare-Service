@@ -22,7 +22,6 @@ export default function App() {
   return (
     <>
       {admin ? <AdminApp /> : <PublicSite />}
-      <SupabaseBanner />
     </>
   )
 }
