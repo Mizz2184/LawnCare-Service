@@ -185,20 +185,7 @@ export default function ProjectsPage({ onBack, onBook }: Props) {
                     />
                   )}
 
-                  <div className="absolute inset-0 bg-gradient-to-t from-forest-950/70 via-transparent to-transparent group-hover:from-forest-950/80 transition-colors" />
-
-                  {/* Badges */}
-                  <div className="absolute top-3 left-3 flex gap-2">
-                    {item.type === 'video' ? (
-                      <span className="badge bg-lemon-400 text-forest-950 font-semibold border border-lemon-300 shadow-soft">
-                        <Video className="w-3.5 h-3.5" /> Video Showcase
-                      </span>
-                    ) : (
-                      <span className="badge bg-white/95 text-forest-800 font-semibold border border-white">
-                        <ImageIcon className="w-3.5 h-3.5" /> Enhanced HD Photo
-                      </span>
-                    )}
-                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-forest-950/40 via-transparent to-transparent group-hover:from-forest-950/60 transition-colors" />
 
                   {/* Hover Action Center Badge */}
                   <div className="absolute inset-0 grid place-items-center">
@@ -209,11 +196,6 @@ export default function ProjectsPage({ onBack, onBook }: Props) {
                         <Maximize2 className="w-6 h-6 text-cream-50" />
                       )}
                     </div>
-                  </div>
-
-                  <div className="absolute bottom-3 left-3 flex items-center gap-1.5 text-cream-50 text-xs font-medium backdrop-blur bg-forest-950/60 px-3 py-1 rounded-full border border-white/10">
-                    <MapPin className="w-3 h-3 text-lemon-400" />
-                    <span>{item.location}</span>
                   </div>
                 </div>
 
