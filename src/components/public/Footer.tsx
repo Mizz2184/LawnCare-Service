@@ -56,6 +56,7 @@ export default function Footer({ settings, onBook }: { settings: BusinessSetting
           </h4>
           <ul className="mt-5 space-y-3 text-cream-50/90">
             <li><a className="hover:text-white" href="#services">Services</a></li>
+            <li><a className="hover:text-white" href="#/quote">Request a Quote</a></li>
             <li><a className="hover:text-white" href="#/projects">Projects & Videos</a></li>
             <li><a className="hover:text-white" href="#about">About Our Story</a></li>
             <li><a className="hover:text-white" href="#faq">FAQ</a></li>

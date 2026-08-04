@@ -10,6 +10,7 @@ import MobileStickyCTA from '../components/public/MobileStickyCTA'
 import SchemaMarkup from '../components/public/SchemaMarkup'
 import ServiceDetailPage from './ServiceDetailPage'
 import ProjectsPage from './ProjectsPage'
+import RequestQuotePage from './RequestQuotePage'
 import { useBusinessSettings } from '../hooks/useBusinessSettings'
 import type { Service } from '../types/database'
 
@@ -26,16 +27,23 @@ function isProjectsRoute(): boolean {
   return hash === '#/projects' || hash === '#projects'
 }
 
+function isQuoteRoute(): boolean {
+  const hash = window.location.hash || ''
+  return hash === '#/quote' || hash === '#quote' || hash === '#/request-a-quote'
+}
+
 export default function PublicSite() {
   const { settings } = useBusinessSettings()
   const [preselected, setPreselected] = useState<Service | null>(null)
   const [currentServiceSlug, setCurrentServiceSlug] = useState<string | null>(getServiceSlugFromHash())
   const [isProjects, setIsProjects] = useState<boolean>(isProjectsRoute())
+  const [isQuote, setIsQuote] = useState<boolean>(isQuoteRoute())
 
   useEffect(() => {
     function onHashChange() {
       setCurrentServiceSlug(getServiceSlugFromHash())
       setIsProjects(isProjectsRoute())
+      setIsQuote(isQuoteRoute())
     }
     window.addEventListener('hashchange', onHashChange)
     return () => window.removeEventListener('hashchange', onHashChange)
@@ -44,6 +52,7 @@ export default function PublicSite() {
   function scrollToBooking() {
     setCurrentServiceSlug(null)
     setIsProjects(false)
+    setIsQuote(false)
     window.location.hash = '#book'
     setTimeout(() => {
       const el = document.getElementById('book')
@@ -54,6 +63,7 @@ export default function PublicSite() {
   function scrollToServices() {
     setCurrentServiceSlug(null)
     setIsProjects(false)
+    setIsQuote(false)
     window.location.hash = '#services'
     setTimeout(() => {
       const el = document.getElementById('services')
@@ -62,10 +72,10 @@ export default function PublicSite() {
   }
 
   useEffect(() => {
-    if (!currentServiceSlug && !isProjects) {
+    if (!currentServiceSlug && !isProjects && !isQuote) {
       document.title = `${settings.business_name || 'Landscaping And Moore'} — Premium Lawn Care & Yard Maintenance`
     }
-  }, [settings.business_name, currentServiceSlug, isProjects])
+  }, [settings.business_name, currentServiceSlug, isProjects, isQuote])
 
   if (currentServiceSlug) {
     return (
@@ -94,6 +104,18 @@ export default function PublicSite() {
         onBack={() => {
           window.location.hash = '#top'
           setIsProjects(false)
+        }}
+        onBook={scrollToBooking}
+      />
+    )
+  }
+
+  if (isQuote) {
+    return (
+      <RequestQuotePage
+        onBack={() => {
+          window.location.hash = '#top'
+          setIsQuote(false)
         }}
         onBook={scrollToBooking}
       />
