@@ -9,6 +9,7 @@ import Footer from '../components/public/Footer'
 import MobileStickyCTA from '../components/public/MobileStickyCTA'
 import SchemaMarkup from '../components/public/SchemaMarkup'
 import ServiceDetailPage from './ServiceDetailPage'
+import ProjectsPage from './ProjectsPage'
 import { useBusinessSettings } from '../hooks/useBusinessSettings'
 import type { Service } from '../types/database'
 
@@ -20,14 +21,21 @@ function getServiceSlugFromHash(): string | null {
   return null
 }
 
+function isProjectsRoute(): boolean {
+  const hash = window.location.hash || ''
+  return hash === '#/projects' || hash === '#projects'
+}
+
 export default function PublicSite() {
   const { settings } = useBusinessSettings()
   const [preselected, setPreselected] = useState<Service | null>(null)
   const [currentServiceSlug, setCurrentServiceSlug] = useState<string | null>(getServiceSlugFromHash())
+  const [isProjects, setIsProjects] = useState<boolean>(isProjectsRoute())
 
   useEffect(() => {
     function onHashChange() {
       setCurrentServiceSlug(getServiceSlugFromHash())
+      setIsProjects(isProjectsRoute())
     }
     window.addEventListener('hashchange', onHashChange)
     return () => window.removeEventListener('hashchange', onHashChange)
@@ -35,6 +43,7 @@ export default function PublicSite() {
 
   function scrollToBooking() {
     setCurrentServiceSlug(null)
+    setIsProjects(false)
     window.location.hash = '#book'
     setTimeout(() => {
       const el = document.getElementById('book')
@@ -44,6 +53,7 @@ export default function PublicSite() {
 
   function scrollToServices() {
     setCurrentServiceSlug(null)
+    setIsProjects(false)
     window.location.hash = '#services'
     setTimeout(() => {
       const el = document.getElementById('services')
@@ -52,10 +62,10 @@ export default function PublicSite() {
   }
 
   useEffect(() => {
-    if (!currentServiceSlug) {
+    if (!currentServiceSlug && !isProjects) {
       document.title = `${settings.business_name || 'Landscaping And Moore'} — Premium Lawn Care & Yard Maintenance`
     }
-  }, [settings.business_name, currentServiceSlug])
+  }, [settings.business_name, currentServiceSlug, isProjects])
 
   if (currentServiceSlug) {
     return (
@@ -74,6 +84,18 @@ export default function PublicSite() {
             el?.scrollIntoView({ behavior: 'smooth', block: 'start' })
           }, 150)
         }}
+      />
+    )
+  }
+
+  if (isProjects) {
+    return (
+      <ProjectsPage
+        onBack={() => {
+          window.location.hash = '#top'
+          setIsProjects(false)
+        }}
+        onBook={scrollToBooking}
       />
     )
   }
