@@ -24,13 +24,11 @@ export default function Hero({ onBook, onViewServices }: Props) {
           <span className="eyebrow">
             <Leaf className="w-3.5 h-3.5" strokeWidth={2.4} /> Lawn Care Services in Chester, Delaware & Montgomery Counties, PA
           </span>
-          <h1 className="mt-5 font-display text-4xl sm:text-5xl lg:text-6xl/[1.05] font-semibold text-forest-900">
-            Reliable Lawn Care Across the Main Line —{' '}
-            <span className="relative inline-block">
-              <span className="relative z-10 italic">A Fresh, Healthy Lawn,</span>
-              <span className="absolute inset-x-0 bottom-1 h-3 bg-lemon-400/60 -z-0 rounded-sm" />
-            </span>{' '}
-            Cared For Every Visit
+          <h1 className="mt-5 font-display text-3xl sm:text-4xl lg:text-5xl/[1.15] font-semibold text-forest-900 tracking-tight">
+            Reliable Lawn Care Across the Main Line
+            <span className="block mt-3 text-2xl sm:text-3xl lg:text-4xl font-medium italic text-forest-700">
+              A fresh, healthy lawn, cared for every visit.
+            </span>
           </h1>
           <p className="mt-5 text-lg text-ink-700 max-w-xl leading-relaxed">
             Book reliable lawn mowing, edging, hedge trimming, fertilization, and seasonal cleanups
