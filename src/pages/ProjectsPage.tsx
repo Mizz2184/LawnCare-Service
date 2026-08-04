@@ -140,7 +140,7 @@ export default function ProjectsPage({ onBack, onBook }: Props) {
                 }`}
               >
                 <Video className="w-3.5 h-3.5" />
-                Videos (4)
+                Videos ({PROJECTS_DATA.filter((p) => p.type === 'video').length})
               </button>
               <button
                 onClick={() => setFilter('image')}
@@ -151,7 +151,7 @@ export default function ProjectsPage({ onBack, onBook }: Props) {
                 }`}
               >
                 <ImageIcon className="w-3.5 h-3.5" />
-                Photos (6)
+                Photos ({PROJECTS_DATA.filter((p) => p.type === 'image').length})
               </button>
             </div>
           </div>

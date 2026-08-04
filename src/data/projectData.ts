@@ -134,16 +134,4 @@ export const PROJECTS_DATA: ProjectItem[] = [
     keywords: ['lawn fertilization photo', 'weed free turf Lehi', 'green lawn gallery'],
     metaDescription: 'HD image showing vibrant green turf and weed-free lawn health treatment results in Lehi.',
   },
-  {
-    id: 'img-6',
-    title: 'Commercial & Residential Yard Maintenance',
-    category: 'maintenance',
-    type: 'image',
-    src: '/projects/project-img-6.webp',
-    description: 'Overview photo of full property maintenance including lawn striping, hedge trimming, and walkway blow-down.',
-    location: 'Cedar Hills, UT',
-    datePublished: '2026-08-03',
-    keywords: ['yard maintenance photo', 'residential property care Cedar Hills', 'full service landscaping'],
-    metaDescription: 'Complete residential yard maintenance portfolio photograph by Landscaping And Moore.',
-  },
 ]
