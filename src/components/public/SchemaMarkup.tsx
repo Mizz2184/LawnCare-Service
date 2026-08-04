@@ -5,9 +5,9 @@ import { DETAILED_SERVICES } from '../../data/serviceData'
 export default function SchemaMarkup({ settings }: { settings: BusinessSettings }) {
   useEffect(() => {
     const businessName = settings.business_name || 'Landscaping And Moore'
-    const phone = settings.business_phone || '(555) 014-2090'
-    const address = settings.business_address || '120 Greenfield Lane, Suite 4, Cedar Hills, UT'
-    const email = settings.business_email || 'hello@landscapingandmoore.com'
+    const phone = settings.business_phone || '(717) 599-0917'
+    const address = settings.business_address || '711 Washington Place, Chesterbrook, PA 19087'
+    const email = settings.business_email || 'landscapingandmoore24@gmail.com'
     const baseUrl = window.location.origin
 
     // 1. HomeAndConstructionBusiness / LawnCareService Schema
@@ -17,23 +17,23 @@ export default function SchemaMarkup({ settings }: { settings: BusinessSettings 
       '@id': `${baseUrl}/#organization`,
       name: businessName,
       image: `${baseUrl}/images/mowing.webp`,
-      logo: `${baseUrl}/logo.jpg`,
+      logo: `${baseUrl}/logo.png`,
       url: baseUrl,
       telephone: phone,
       email: email,
       priceRange: '$$',
       address: {
         '@type': 'PostalAddress',
-        streetAddress: '120 Greenfield Lane, Suite 4',
-        addressLocality: 'Cedar Hills',
-        addressRegion: 'UT',
-        postalCode: '84062',
+        streetAddress: '711 Washington Place',
+        addressLocality: 'Chesterbrook',
+        addressRegion: 'PA',
+        postalCode: '19087',
         addressCountry: 'US',
       },
       geo: {
         '@type': 'GeoCoordinates',
-        latitude: 40.4138,
-        longitude: -111.7583,
+        latitude: 40.0801,
+        longitude: -75.4578,
       },
       areaServed: [
         {

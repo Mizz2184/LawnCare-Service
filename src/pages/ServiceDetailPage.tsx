@@ -44,8 +44,8 @@ export default function ServiceDetailPage({ slug, onBack, onBookService }: Props
       provider: {
         '@type': 'LocalBusiness',
         name: settings.business_name || 'Landscaping And Moore',
-        telephone: settings.business_phone || '(555) 014-2090',
-        address: settings.business_address || '120 Greenfield Lane, Suite 4, Cedar Hills, UT',
+        telephone: settings.business_phone || '(717) 599-0917',
+        address: settings.business_address || '711 Washington Place, Chesterbrook, PA 19087',
       },
       areaServed: {
         '@type': 'City',

@@ -7,9 +7,9 @@ const NOW = new Date().toISOString()
 export const DEMO_BUSINESS_SETTINGS = {
   id: 'demo-settings',
   business_name: "Landscaping And Moore",
-  business_email: 'hello@landscapingandmoore.com',
-  business_phone: '(555) 014-2090',
-  business_address: '120 Greenfield Lane, Suite 4 · Cedar Hills',
+  business_email: 'landscapingandmoore24@gmail.com',
+  business_phone: '(717) 599-0917',
+  business_address: '711 Washington Place, Chesterbrook, PA 19087',
   slot_interval_minutes: 30,
   booking_notice_hours: 4,
   created_at: NOW,

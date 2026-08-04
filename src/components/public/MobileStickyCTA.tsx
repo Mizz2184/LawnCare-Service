@@ -7,7 +7,7 @@ type Props = {
 }
 
 export default function MobileStickyCTA({ settings, onBook }: Props) {
-  const phone = settings.business_phone || '(555) 014-2090'
+  const phone = settings.business_phone || '(717) 599-0917'
 
   return (
     <div className="md:hidden fixed bottom-0 inset-x-0 z-50 bg-forest-900/95 backdrop-blur-md border-t border-forest-700/80 p-3 shadow-2xl animate-fade-up">

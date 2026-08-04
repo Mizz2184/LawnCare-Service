@@ -85,7 +85,7 @@ export default function Login() {
                   id="email"
                   type="email"
                   className="input pl-10"
-                  placeholder="admin@landscapingandmoore.com"
+                  placeholder="landscapingandmoore24@gmail.com"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   autoComplete="email"
