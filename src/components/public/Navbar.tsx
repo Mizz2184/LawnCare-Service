@@ -35,11 +35,11 @@ export default function Navbar({ settings, onBook }: Props) {
     >
       <div className="container-px mx-auto max-w-7xl flex items-center justify-between h-16 md:h-20">
         <a href="#top" className="flex items-center gap-3 group">
-          <div className="relative w-10 h-10 rounded-full overflow-hidden border border-forest-700/20 shadow-soft group-hover:scale-105 transition-transform bg-cream-100 shrink-0">
+          <div className="relative h-10 md:h-12 px-2.5 py-1 rounded-xl bg-white/90 border border-forest-700/15 shadow-soft group-hover:scale-105 transition-transform flex items-center justify-center shrink-0">
             <img
-              src="/logo.jpg"
+              src="/logo.png"
               alt="Landscaping And Moore Logo"
-              className="w-full h-full object-cover"
+              className="h-full w-auto object-contain"
             />
           </div>
           <span className="font-display text-lg md:text-xl font-semibold text-forest-900 tracking-tight">

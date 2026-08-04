@@ -36,11 +36,11 @@ export default function Login() {
         <div className="absolute inset-0 bg-gradient-to-tr from-forest-900/80 via-forest-900/40 to-transparent" />
         <div className="relative z-10 m-auto p-12 text-cream-50 max-w-md">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full overflow-hidden border border-cream-50/20 shadow-soft bg-cream-50 shrink-0">
+            <div className="h-11 px-2.5 py-1 rounded-xl border border-cream-50/20 shadow-soft bg-white shrink-0 flex items-center justify-center">
               <img
-                src="/logo.jpg"
+                src="/logo.png"
                 alt="Landscaping And Moore Logo"
-                className="w-full h-full object-cover"
+                className="h-full w-auto object-contain"
               />
             </div>
             <span className="font-display text-2xl font-semibold tracking-tight">Landscaping And Moore</span>
@@ -61,11 +61,11 @@ export default function Login() {
           className="w-full max-w-md bg-white rounded-3xl border border-ink-100 shadow-card p-8 md:p-10"
         >
           <div className="lg:hidden flex items-center gap-3 mb-6">
-            <div className="w-10 h-10 rounded-full overflow-hidden border border-forest-700/20 shadow-soft bg-cream-100 shrink-0">
+            <div className="h-10 px-2.5 py-1 rounded-xl border border-forest-700/20 shadow-soft bg-cream-100 shrink-0 flex items-center justify-center">
               <img
-                src="/logo.jpg"
+                src="/logo.png"
                 alt="Landscaping And Moore Logo"
-                className="w-full h-full object-cover"
+                className="h-full w-auto object-contain"
               />
             </div>
             <span className="font-display text-xl font-semibold tracking-tight text-forest-900">

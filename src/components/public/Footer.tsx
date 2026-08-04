@@ -8,11 +8,11 @@ export default function Footer({ settings, onBook }: { settings: BusinessSetting
       <div className="container-px mx-auto max-w-7xl py-16 md:py-20 grid lg:grid-cols-12 gap-10 relative">
         <div className="lg:col-span-5">
           <div className="flex items-center gap-3">
-            <div className="w-11 h-11 rounded-full overflow-hidden border border-cream-50/20 shadow-soft bg-cream-50 shrink-0">
+            <div className="h-12 px-3 py-1 rounded-xl bg-white border border-cream-50/20 shadow-soft shrink-0 flex items-center justify-center">
               <img
-                src="/logo.jpg"
+                src="/logo.png"
                 alt="Landscaping And Moore Logo"
-                className="w-full h-full object-cover"
+                className="h-full w-auto object-contain"
               />
             </div>
             <span className="font-display text-2xl font-semibold tracking-tight">
