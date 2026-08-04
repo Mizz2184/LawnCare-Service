@@ -1,4 +1,4 @@
-import { CheckCircle2, Leaf, Truck, Users2 } from 'lucide-react'
+import { CheckCircle2, Heart, Leaf, Sparkles, Truck, Users2 } from 'lucide-react'
 import { ABOUT_IMAGE_PRIMARY, ABOUT_IMAGE_SECONDARY } from '../../utils/serviceImages'
 
 const POINTS = [
@@ -28,9 +28,63 @@ const CHECKLIST = [
 
 export default function About() {
   return (
-    <section id="about" className="section bg-gradient-to-b from-cream-50 to-sage-50 relative overflow-hidden">
+    <section id="about" className="section bg-gradient-to-b from-cream-50 via-sage-50/50 to-cream-50 relative overflow-hidden space-y-20 md:space-y-28">
       <div className="absolute -top-32 -right-20 w-[420px] h-[420px] rounded-full bg-sage-200/40 blur-3xl -z-0" />
-      <div className="container-px mx-auto max-w-7xl grid lg:grid-cols-12 gap-12 lg:gap-16 items-center relative">
+      <div className="absolute bottom-10 -left-20 w-[480px] h-[480px] rounded-full bg-forest-100/30 blur-3xl -z-0" />
+
+      {/* 1. Our Story Block */}
+      <div className="container-px mx-auto max-w-7xl relative z-10">
+        <div className="text-center max-w-3xl mx-auto mb-12">
+          <span className="eyebrow inline-flex">
+            <Heart className="w-3.5 h-3.5" /> About Us
+          </span>
+          <h2 className="mt-4 font-display text-4xl md:text-5xl font-semibold text-forest-900 tracking-tight">
+            Our Story
+          </h2>
+        </div>
+
+        <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          {/* Story Text Box */}
+          <div className="lg:col-span-7 space-y-6">
+            <div className="bg-white/90 backdrop-blur rounded-3xl p-8 md:p-10 border border-forest-100 shadow-card space-y-4">
+              <p className="text-lg md:text-xl text-forest-900 font-display font-medium leading-relaxed">
+                Landscaping And Moore first started in college when our owner, Benjamin, and his friends decided to service local residential properties with their landscaping needs as a means to financially afford college tuition.
+              </p>
+              <p className="text-ink-700 text-base md:text-lg leading-relaxed">
+                Since then, we have been able to service over 40+ clients with a multitude of different services. We believe in building lasting relationships with our clients, getting to know them and their personal style so that we can best bring their vision to life.
+              </p>
+              <p className="text-ink-700 text-base md:text-lg leading-relaxed pt-2 border-t border-cream-100/80 font-medium">
+                We strive to help each and every client bring their vision to life as well as build a solid, lifelong relationship together!
+              </p>
+            </div>
+          </div>
+
+          {/* Story Image */}
+          <div className="lg:col-span-5 relative">
+            <div className="relative aspect-[4/3] sm:aspect-[16/11] lg:aspect-[4/3] rounded-[2rem] overflow-hidden shadow-card border border-white group">
+              <img
+                src="/images/our-story.webp"
+                alt="Landscaping And Moore team performing landscaping work"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-forest-900/40 via-transparent to-transparent" />
+              <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur rounded-2xl p-4 shadow-lift border border-white flex items-center gap-3">
+                <div className="w-9 h-9 rounded-xl bg-forest-50 text-forest-700 grid place-items-center shrink-0">
+                  <Sparkles className="w-4 h-4" />
+                </div>
+                <div>
+                  <div className="text-xs uppercase tracking-wider text-ink-500 font-medium">Built on Trust</div>
+                  <div className="text-sm font-semibold text-forest-900">Lifelong Client Relationships</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* 2. Why Homeowners Choose Us Block */}
+      <div className="container-px mx-auto max-w-7xl grid lg:grid-cols-12 gap-12 lg:gap-16 items-center relative z-10 pt-8 border-t border-forest-100/60">
         <div className="lg:col-span-6 relative">
           <div className="grid grid-cols-12 gap-4">
             <div className="col-span-8 relative">
